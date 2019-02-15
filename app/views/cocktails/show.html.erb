@@ -1,0 +1,5 @@
+<h3><%= @cocktail.name %> <%= link_to 'Edit', edit_cocktail_path(@cocktail), class:"btn" %></h3>
+<% @cocktail.doses.each do |dose| %>
+  <%= render 'doses/dose-show', dose: dose %>
+<% end %>
+<%= link_to '< More cocktails', cocktails_path, class:"btn" %>

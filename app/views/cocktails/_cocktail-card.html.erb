@@ -1,0 +1,6 @@
+<div class="cocktail-card">
+  <h3><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
+  <% cocktail.ingredients.each do |ingredient| %>
+    <p><%= ingredient.name %></p>
+  <% end %>
+</div>

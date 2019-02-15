@@ -1,0 +1,5 @@
+<%= simple_form_for @cocktail, wrapper: :inline_form, html: { class: 'form-inline' } do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :name, class:"form-control" %>
+  <%= f.submit 'Save name', class: "btn btn-primary" %>
+<% end %>
