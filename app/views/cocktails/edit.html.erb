@@ -1,3 +1,5 @@
+<div class="row">
+  <div class="col-lg-6 col-lg-offset-3"><h1>New dose</h1>
 <%= render 'cocktail-edit', cocktail: @cocktail %>
 <% @cocktail.doses.each do |dose| %>
   <div class="dose">
@@ -9,3 +11,5 @@
 <%= link_to 'Add dose', new_cocktail_dose_path(@cocktail), class:"btn btn-primary" %> <br>
 <%= link_to 'Back', cocktail_path(@cocktail), class:"btn btn-warning" %> <br>
 <%= link_to 'Delete cocktail', cocktail_path(@cocktail), method: :delete, class:"btn btn-danger" %>
+  </div>
+</div>

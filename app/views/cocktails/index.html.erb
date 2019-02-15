@@ -1,5 +1,11 @@
 <h1>Cocktails</h1>
-<%= link_to "Add new cocktail", new_cocktail_path %>
-<% @cocktails.each do |cocktail| %>
-  <%= render 'cocktail-card', cocktail: cocktail %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <p><%= link_to "Add new cocktail", new_cocktail_path %></p>
+      <% @cocktails.each do |cocktail| %>
+        <div class="col-sm-4 col-lg-4">
+          <%= render 'cocktail-card', cocktail: cocktail %>
+        </div>
+      <% end %>
+  </div>
+</div>

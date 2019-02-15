@@ -12,7 +12,6 @@ class DosesController < ApplicationController
     return redirect_to edit_cocktail_path(@dose.cocktail) if @dose.save
 
     render :new
-
   end
 
   def set_dose

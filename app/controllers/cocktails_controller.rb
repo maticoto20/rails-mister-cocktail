@@ -22,8 +22,9 @@ class CocktailsController < ApplicationController
   end
 
   def update
-    @cocktail.update(cocktail_params)
-    redirect_to edit_cocktail_path(@cocktail)
+    return redirect_to edit_cocktail_path(@cocktail) if @cocktail.update(cocktail_params)
+
+    render :edit
   end
 
   def set_cocktail

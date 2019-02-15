@@ -1,10 +1,26 @@
 // Place all the styles related to the cocktails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body {
-  background-color: rgba(0,0,0,0.1);
-}
 
 .cocktail-card {
   border-radius: 5px;
+  background-color: white;
+  height: 200px;
+  box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+  text-align: left;
+  position: relative;
+  margin: 10px;
+  .description{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  h3 {
+    margin: 0;
+  }
+  ul {
+    margin: 10px;
+    // padding-left: 20px;
+  }
 }
+
