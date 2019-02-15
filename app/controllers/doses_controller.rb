@@ -9,8 +9,10 @@ class DosesController < ApplicationController
   def create
     @dose = Dose.new(dose_params)
     @dose.cocktail = @cocktail
-    @dose.save!
-    redirect_to edit_cocktail_path(@dose.cocktail)
+    return redirect_to edit_cocktail_path(@dose.cocktail) if @dose.save
+
+    render :new
+
   end
 
   def set_dose
